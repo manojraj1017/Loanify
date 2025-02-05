@@ -22,7 +22,7 @@
 
   <div class="card">
     <p class="label loanHeading">Loan Amount</p>
-    <h3 class="loanAmt">
+    <h3 class="loanAmt1">
       Rp {{ loanAmount | number : "1.0-3" | replaceComma }}
     </h3>
     <input
@@ -41,7 +41,7 @@
 
   <div class="card">
     <p class="label loanHeading">Loan Period</p>
-    <h3 class="loanAmt">{{ loanPeriod }} Months</h3>
+    <h3 class="loanAmt2">{{ loanPeriod }} Months</h3>
     <input
       type="range"
       min="6"
@@ -58,9 +58,12 @@
 
   <div class="card">
     <p class="label loanHeading-card3">Estimated Monthly Installments</p>
-    <h3 class="Instalcard3">Rp {{ monthlyInstallment | number : "1.0-3" | replaceComma }}</h3>
+    <h3 class="Instalcard3">
+      Rp {{ monthlyInstallment | number : "1.0-0" | replaceComma }}
+    </h3>
     <p class="note">
-      Installment fees may change according to the results of the verification of the physical condition of the vehicle of the branch office.
+      Installment fees may change according to the results of the verification
+      of the physical condition of the vehicle of the branch office.
     </p>
   </div>
 

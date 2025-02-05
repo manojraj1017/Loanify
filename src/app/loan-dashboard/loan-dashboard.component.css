@@ -82,7 +82,8 @@ input[type="range"] {
 }
 
 .loanHeading {
-  padding: 0px 292px 0px 0px;
+  padding: 0;
+  right: 5px;
   position: relative;
   bottom: 16px;
   font-size: 16px;
@@ -90,8 +91,9 @@ input[type="range"] {
   font-family: serif;
   font-weight: 600;
 }
-.loanAmt {
-  padding: 0px 292px 0px 0px;
+.loanAmt1 {
+  padding: 0;
+  right: 1px;
   position: relative;
   bottom: 16px;
   font-size: 20px;
@@ -100,6 +102,16 @@ input[type="range"] {
   font-weight: 600;
 }
 
+.loanAmt2 {
+  padding: 0;
+  right: 12px;
+  position: relative;
+  bottom: 16px;
+  font-size: 20px;
+  width: 128px;
+  font-family: serif;
+  font-weight: 600;
+}
 .custom-range {
   -webkit-appearance: none;
   width: 100%;
@@ -145,8 +157,8 @@ input[type="range"] {
   opacity: 0.5;
 }
 
-.loanHeading-card3{
-  padding: 0px 292px 0px 0px;
+.loanHeading-card3 {
+  padding: 0;
   position: relative;
   bottom: 16px;
   font-size: 16px;
@@ -155,9 +167,9 @@ input[type="range"] {
   font-weight: 600;
 }
 
-.Instalcard3{
+.Instalcard3 {
   position: relative;
-  right: 90px;
+  right: 106px;
   font-size: 25px;
   bottom: 15px;
 }
@@ -181,4 +193,90 @@ input[type="range"] {
   border-radius: 5px;
   font-size: 20px;
   font-weight: 600;
+}
+
+@media (max-width: 480px) {
+  .container {
+    max-width: 285px;
+  }
+
+  .card1-content {
+    right: 28px;
+  }
+
+  .card1-content1 {
+    right: 85px;
+  }
+
+  .Instalcard3 {
+    right: 45px;
+  }
+
+  .loanHeading {
+    right: 5px;
+  }
+
+  .loanAmt2 {
+    right: 13px;
+  }
+
+  .card2-content2 {
+    left: 99px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .container {
+    max-width: 389px;
+  }
+
+  .card1-content {
+    right: 75px;
+  }
+
+  .card1-content1 {
+    right: 132px;
+  }
+
+  .Instalcard3 {
+    right: 106px;
+  }
+
+  .loanHeading {
+    right: 5px;
+  }
+
+  .loanAmt2 {
+    right: 13px;
+  }
+
+  .card2-content2 {
+    left: 223px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    max-width: 389px;
+  }
+
+  .card1-content {
+    right: 75px;
+  }
+
+  .card1-content1 {
+    right: 132px;
+  }
+
+  .Instalcard3 {
+    right: 106px;
+  }
+
+  .loanHeading {
+    right: 5px;
+  }
+
+  .loanAmt2 {
+    right: 13px;
+  }
 }
