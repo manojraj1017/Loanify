@@ -1,0 +1,68 @@
+<div class="container">
+  <div class="headercontainer">
+    <mat-icon>arrow_back_ios</mat-icon>
+    <h2 class="loan_header">Loan Calculator</h2>
+    <mat-icon>more_vert</mat-icon>
+  </div>
+
+  <div class="card activeCard">
+    <p class="label">Maximum Funding</p>
+    <h3 class="maxFund">
+      Rp {{ maxFunding | number : "1.0-3" | replaceComma }}
+    </h3>
+    <div class="borderline"></div>
+    <div class="headercontainer">
+      <div class="headercontainer-1">
+        <p class="card1-content">Honda ADV 150 CBS</p>
+        <p class="card1-content1">2022</p>
+      </div>
+      <mat-icon class="filterIcon">tune</mat-icon>
+    </div>
+  </div>
+
+  <div class="card">
+    <p class="label loanHeading">Loan Amount</p>
+    <h3 class="loanAmt">
+      Rp {{ loanAmount | number : "1.0-3" | replaceComma }}
+    </h3>
+    <input
+      type="range"
+      min="1000000"
+      max="17400000"
+      [(ngModel)]="loanAmount"
+      (input)="calculateLoan()"
+      class="custom-range"
+    />
+    <div class="headercontainer">
+      <div class="card2-content1">1.000.000</div>
+      <div class="card2-content2">17.400.000</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <p class="label loanHeading">Loan Period</p>
+    <h3 class="loanAmt">{{ loanPeriod }} Months</h3>
+    <input
+      type="range"
+      min="6"
+      max="18"
+      [(ngModel)]="loanPeriod"
+      (input)="calculateLoan()"
+      class="custom-range"
+    />
+    <div class="headercontainer">
+      <div class="card2-content1">6 Months</div>
+      <div class="card2-content2">18 Months</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <p class="label loanHeading-card3">Estimated Monthly Installments</p>
+    <h3 class="Instalcard3">Rp {{ monthlyInstallment | number : "1.0-3" | replaceComma }}</h3>
+    <p class="note">
+      Installment fees may change according to the results of the verification of the physical condition of the vehicle of the branch office.
+    </p>
+  </div>
+
+  <button class="apply-btn" (click)="callapplyLoan()">APPLY LOAN</button>
+</div>
